@@ -43,9 +43,7 @@ footer {
     margin: auto;
     margin-bottom: 2rem;
 }
-.hide {
-    display: none;
-}
+
 ul,li {
     list-style: none;
 }
@@ -76,7 +74,9 @@ img {
 .nav-section-item {
     margin-bottom: 2rem;
 }
-
+.hide-el {
+    display: none;
+}
 
 
 h1 {
@@ -518,5 +518,8 @@ figcaption {
     }
     .footer-head::after {
         content: '';
+    }
+    .hide {
+        display: none;
     }
 }
