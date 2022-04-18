@@ -554,4 +554,7 @@ figcaption {
     .hide {
         display: none;
     }
+    .nav-icon {
+        display: none;
+    }
 }
