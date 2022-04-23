@@ -727,11 +727,13 @@ figcaption {
         height: 600px;
         background-size: 1200px;
     }
+
     @keyframes globe {
-        0% {
-            background-position-x: 0;
-        }
-        100% {
-            background-position-x: -1200px;
-        }
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1200px;
+    }
+    }
 }
