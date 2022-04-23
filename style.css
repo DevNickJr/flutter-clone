@@ -92,22 +92,32 @@ img {
 
 .nav-icon {
     width: 25px;
-    height: 10px;
-    /* border: 2px solid red; */
+    height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: relative;
 }
 .line {
-    border-bottom: 2px solid black;
+    border: 2px solid black;
     transition: all 1s;
 }
 .line1 {
-    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
 }
 .line2 {
-    transform: translate(0, -250%);
-    transition: all .5s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    transform: rotate(-45deg);
+    transform-origin: 10% 50%;
+    /* transition: all .5s; */
 }
 
 
@@ -291,6 +301,145 @@ figcaption {
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 0 25px 20px rgb(240, 227, 227) ;
 }
+
+.atm-container {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 4rem auto;
+    transition: all 2s linear;
+    overflow: hidden;
+}
+.atm {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    box-shadow: none;
+    background-color: gray;
+    box-shadow: 0px 2px rgb(0, 0, 0, 0.1); 
+    transition: all .5s linear;
+} 
+#atm1 {
+    top: 0;
+    z-index: 4;
+}
+#atm2 {
+    
+    top: 20px;
+    z-index: 3;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, 0); 
+      
+}
+#atm3 {
+    /* position: absolute; */
+    top: 40px;
+    z-index: 2;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0); 
+}
+#atm4 {
+    top: 60px;
+    z-index: 1;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%, 0); 
+}
+
+/* 
+@keyframes shuffle {
+    0% {
+        top: 0;
+        z-index: 4;
+        height: 80%;    
+    }
+    25% {
+        top: 20px;
+        z-index: 3;
+        width: 90%;
+        left: 50%;
+        transform: translate(-50%, 0); 
+    }
+    50% {
+        
+        top: 40px;
+        z-index: 2;
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, 0); 
+    }
+    75% {
+        background-color: red;
+        top: 60px;
+        z-index: 1;
+        width: 70%;
+        left: 50%;
+        transform: translate(-50%, 0); 
+    }
+    100% {
+        top: 0;
+        z-index: 4;
+        height: 80%;
+    }
+
+} */
+
+
+
+
+.map-container {
+    width: 300px;
+    height: 300px;
+    margin: 5rem auto;
+    border-radius: 50%;
+    background-image: url('./images/earth-g4452c644a_1920.jpg');
+    animation: globe 10s linear infinite;
+    background-size: 600px;
+    position: relative;
+}
+
+.map-container svg {
+    width: 130%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes globe {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -600px;
+    }
+
+}
+@keyframes globe1 {
+    0% {
+        transform: translate(0%);
+    }
+    100% {
+        transform: translate(-50%);
+    }
+    /* 100% {
+        transform: translate(0%);
+    } */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .quick-transfer-list {
     list-style: none;
