@@ -309,6 +309,12 @@ figcaption {
     margin: 4rem auto;
     transition: all 2s linear;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 10px rgb(29, 29, 29, 0.5);
 }
 .atm {
     position: absolute;
@@ -318,6 +324,11 @@ figcaption {
     background-color: gray;
     box-shadow: 0px 2px rgb(0, 0, 0, 0.1); 
     transition: all .5s linear;
+
+    text-align: left;
+    border-radius: 20px;
+    padding: 2rem 1.7rem;
+    color: white;
 } 
 #atm1 {
     top: 0;
@@ -706,4 +717,21 @@ figcaption {
     .nav-icon {
         display: none;
     }
+    .global-reach-globe {
+        display: flex;
+        align-items: center;
+    }
+    
+    .map-container {
+        width: 700px;
+        height: 600px;
+        background-size: 1200px;
+    }
+    @keyframes globe {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: -1200px;
+        }
 }
